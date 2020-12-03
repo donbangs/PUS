@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CovidService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CovidService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="CovidPerson">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Infected" />
+      <xs:enumeration value="ContactWithInfected" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CovidPerson" nillable="true" type="tns:CovidPerson" />
+  <xs:complexType name="PersonWithCovid">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateContact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateSymptoms" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateTest" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Town" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypePerson" type="tns:CovidPerson" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonWithCovid" nillable="true" type="tns:PersonWithCovid" />
+  <xs:complexType name="ArrayOfPersonWithCovid">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonWithCovid" nillable="true" type="tns:PersonWithCovid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonWithCovid" nillable="true" type="tns:ArrayOfPersonWithCovid" />
+</xs:schema>

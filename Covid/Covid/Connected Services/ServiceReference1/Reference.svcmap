@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="af54ea11-c2ee-409c-a8df-e7a06bc0715f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:57075/CovidService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="3a59fac6-5ebf-4f8f-ba2a-eb8755c29999" SourceId="1" SourceUrl="http://localhost:57075/CovidService.svc?wsdl" />
+    <MetadataFile FileName="CovidService.xsd" MetadataType="Schema" ID="3739c93d-c0ff-4acb-8487-1f26be226d60" SourceId="1" SourceUrl="http://localhost:57075/CovidService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CovidService1.xsd" MetadataType="Schema" ID="5497b61d-3e73-431f-a115-b27f485e3c6b" SourceId="1" SourceUrl="http://localhost:57075/CovidService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CovidService2.xsd" MetadataType="Schema" ID="792d6cea-7fff-4d9a-b0b5-24931ae75545" SourceId="1" SourceUrl="http://localhost:57075/CovidService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CovidService.disco" MetadataType="Disco" ID="8893c3e0-9b8c-4e4e-8373-f86e06382a33" SourceId="1" SourceUrl="http://localhost:57075/CovidService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

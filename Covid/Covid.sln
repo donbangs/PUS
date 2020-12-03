@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid", "Covid\Covid.csproj", "{CFC683DE-28BC-4158-89D2-D8373E042AAB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{07E6DECB-B9DA-47DE-9A64-1A424C7BBF34} = {07E6DECB-B9DA-47DE-9A64-1A424C7BBF34}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CovidService", "CovidService\CovidService.csproj", "{07E6DECB-B9DA-47DE-9A64-1A424C7BBF34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFC683DE-28BC-4158-89D2-D8373E042AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFC683DE-28BC-4158-89D2-D8373E042AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFC683DE-28BC-4158-89D2-D8373E042AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFC683DE-28BC-4158-89D2-D8373E042AAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07E6DECB-B9DA-47DE-9A64-1A424C7BBF34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07E6DECB-B9DA-47DE-9A64-1A424C7BBF34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07E6DECB-B9DA-47DE-9A64-1A424C7BBF34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07E6DECB-B9DA-47DE-9A64-1A424C7BBF34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E59C0D73-B4CF-40A5-8FDA-EE609A2AD5AC}
+	EndGlobalSection
+EndGlobal

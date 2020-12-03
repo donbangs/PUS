@@ -9,128 +9,66 @@
 //------------------------------------------------------------------------------
 
 namespace WindowsFormsApp1.ServiceReference1 {
-    using System.Runtime.Serialization;
-    using System;
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Complex", Namespace="http://schemas.datacontract.org/2004/07/ICalcalator")]
-    [System.SerializableAttribute()]
-    public partial class Complex : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private double ImagValueField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private double RealValueField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public double ImagValue {
-            get {
-                return this.ImagValueField;
-            }
-            set {
-                if ((this.ImagValueField.Equals(value) != true)) {
-                    this.ImagValueField = value;
-                    this.RaisePropertyChanged("ImagValue");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public double RealValue {
-            get {
-                return this.RealValueField;
-            }
-            set {
-                if ((this.RealValueField.Equals(value) != true)) {
-                    this.RealValueField = value;
-                    this.RaisePropertyChanged("RealValue");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.ICalculator")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://Microsoft.ServiceModel.Samples", ConfigurationName="ServiceReference1.ICalculator")]
     public interface ICalculator {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/AsyncAdd", ReplyAction="http://tempuri.org/ICalculator/AsyncAddResponse")]
-        void AsyncAdd(WindowsFormsApp1.ServiceReference1.Complex Value1, WindowsFormsApp1.ServiceReference1.Complex Value2);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Add", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/AddResponse")]
+        ICalcalator.Complex Add(ICalcalator.Complex Value1, ICalcalator.Complex Value2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/AsyncAdd", ReplyAction="http://tempuri.org/ICalculator/AsyncAddResponse")]
-        System.Threading.Tasks.Task AsyncAddAsync(WindowsFormsApp1.ServiceReference1.Complex Value1, WindowsFormsApp1.ServiceReference1.Complex Value2);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Add", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/AddResponse")]
+        System.Threading.Tasks.Task<ICalcalator.Complex> AddAsync(ICalcalator.Complex Value1, ICalcalator.Complex Value2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Add", ReplyAction="http://tempuri.org/ICalculator/AddResponse")]
-        string Add(WindowsFormsApp1.ServiceReference1.Complex Value1, WindowsFormsApp1.ServiceReference1.Complex Value2);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Subtraction", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/SubtractionResponse")]
+        ICalcalator.Complex Subtraction(ICalcalator.Complex Value1, ICalcalator.Complex Value2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Add", ReplyAction="http://tempuri.org/ICalculator/AddResponse")]
-        System.Threading.Tasks.Task<string> AddAsync(WindowsFormsApp1.ServiceReference1.Complex Value1, WindowsFormsApp1.ServiceReference1.Complex Value2);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Subtraction", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/SubtractionResponse")]
+        System.Threading.Tasks.Task<ICalcalator.Complex> SubtractionAsync(ICalcalator.Complex Value1, ICalcalator.Complex Value2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Subtraction", ReplyAction="http://tempuri.org/ICalculator/SubtractionResponse")]
-        string Subtraction(WindowsFormsApp1.ServiceReference1.Complex Value1, WindowsFormsApp1.ServiceReference1.Complex Value2);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Multiply", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/MultiplyResponse")]
+        ICalcalator.Complex Multiply(ICalcalator.Complex Value1, ICalcalator.Complex Value2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Subtraction", ReplyAction="http://tempuri.org/ICalculator/SubtractionResponse")]
-        System.Threading.Tasks.Task<string> SubtractionAsync(WindowsFormsApp1.ServiceReference1.Complex Value1, WindowsFormsApp1.ServiceReference1.Complex Value2);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Multiply", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/MultiplyResponse")]
+        System.Threading.Tasks.Task<ICalcalator.Complex> MultiplyAsync(ICalcalator.Complex Value1, ICalcalator.Complex Value2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Multiply", ReplyAction="http://tempuri.org/ICalculator/MultiplyResponse")]
-        string Multiply(WindowsFormsApp1.ServiceReference1.Complex Value1, WindowsFormsApp1.ServiceReference1.Complex Value2);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Division", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/DivisionResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ICalcalator.GreetingFault), Action="http://www.contoso.com/GreetingFault", Name="GreetingFault", Namespace="http://schemas.datacontract.org/2004/07/ICalcalator")]
+        ICalcalator.Complex Division(ICalcalator.Complex Value1, ICalcalator.Complex Value2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Multiply", ReplyAction="http://tempuri.org/ICalculator/MultiplyResponse")]
-        System.Threading.Tasks.Task<string> MultiplyAsync(WindowsFormsApp1.ServiceReference1.Complex Value1, WindowsFormsApp1.ServiceReference1.Complex Value2);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Division", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/DivisionResponse")]
+        System.Threading.Tasks.Task<ICalcalator.Complex> DivisionAsync(ICalcalator.Complex Value1, ICalcalator.Complex Value2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Division", ReplyAction="http://tempuri.org/ICalculator/DivisionResponse")]
-        string Division(WindowsFormsApp1.ServiceReference1.Complex Value1, WindowsFormsApp1.ServiceReference1.Complex Value2);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Add2", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/Add2Response")]
+        ICalcalator.Complex Add2(double Value1, double Value2, double Value3, double Value4);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Division", ReplyAction="http://tempuri.org/ICalculator/DivisionResponse")]
-        System.Threading.Tasks.Task<string> DivisionAsync(WindowsFormsApp1.ServiceReference1.Complex Value1, WindowsFormsApp1.ServiceReference1.Complex Value2);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Add2", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/Add2Response")]
+        System.Threading.Tasks.Task<ICalcalator.Complex> Add2Async(double Value1, double Value2, double Value3, double Value4);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Add2", ReplyAction="http://tempuri.org/ICalculator/Add2Response")]
-        string Add2(double Value1, double Value2, double Value3, double Value4);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Subtraction2", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/Subtraction2Response")]
+        ICalcalator.Complex Subtraction2(double Value1, double Value2, double Value3, double Value4);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Add2", ReplyAction="http://tempuri.org/ICalculator/Add2Response")]
-        System.Threading.Tasks.Task<string> Add2Async(double Value1, double Value2, double Value3, double Value4);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Subtraction2", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/Subtraction2Response")]
+        System.Threading.Tasks.Task<ICalcalator.Complex> Subtraction2Async(double Value1, double Value2, double Value3, double Value4);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Subtraction2", ReplyAction="http://tempuri.org/ICalculator/Subtraction2Response")]
-        string Subtraction2(double Value1, double Value2, double Value3, double Value4);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Multiply2", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/Multiply2Response")]
+        ICalcalator.Complex Multiply2(double Value1, double Value2, double Value3, double Value4);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Subtraction2", ReplyAction="http://tempuri.org/ICalculator/Subtraction2Response")]
-        System.Threading.Tasks.Task<string> Subtraction2Async(double Value1, double Value2, double Value3, double Value4);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Multiply2", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/Multiply2Response")]
+        System.Threading.Tasks.Task<ICalcalator.Complex> Multiply2Async(double Value1, double Value2, double Value3, double Value4);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Multiply2", ReplyAction="http://tempuri.org/ICalculator/Multiply2Response")]
-        string Multiply2(double Value1, double Value2, double Value3, double Value4);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Division2", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/Division2Response")]
+        ICalcalator.Complex Division2(double Value1, double Value2, double Value3, double Value4);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Multiply2", ReplyAction="http://tempuri.org/ICalculator/Multiply2Response")]
-        System.Threading.Tasks.Task<string> Multiply2Async(double Value1, double Value2, double Value3, double Value4);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Division2", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/Division2Response")]
+        System.Threading.Tasks.Task<ICalcalator.Complex> Division2Async(double Value1, double Value2, double Value3, double Value4);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Division2", ReplyAction="http://tempuri.org/ICalculator/Division2Response")]
-        string Division2(double Value1, double Value2, double Value3, double Value4);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/GetValue", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/GetValueResponse")]
+        string GetValue(ICalcalator.Complex complex);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Division2", ReplyAction="http://tempuri.org/ICalculator/Division2Response")]
-        System.Threading.Tasks.Task<string> Division2Async(double Value1, double Value2, double Value3, double Value4);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/GetValue", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/GetValueResponse")]
+        System.Threading.Tasks.Task<string> GetValueAsync(ICalcalator.Complex complex);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -160,76 +98,76 @@ namespace WindowsFormsApp1.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public void AsyncAdd(WindowsFormsApp1.ServiceReference1.Complex Value1, WindowsFormsApp1.ServiceReference1.Complex Value2) {
-            base.Channel.AsyncAdd(Value1, Value2);
-        }
-        
-        public System.Threading.Tasks.Task AsyncAddAsync(WindowsFormsApp1.ServiceReference1.Complex Value1, WindowsFormsApp1.ServiceReference1.Complex Value2) {
-            return base.Channel.AsyncAddAsync(Value1, Value2);
-        }
-        
-        public string Add(WindowsFormsApp1.ServiceReference1.Complex Value1, WindowsFormsApp1.ServiceReference1.Complex Value2) {
+        public ICalcalator.Complex Add(ICalcalator.Complex Value1, ICalcalator.Complex Value2) {
             return base.Channel.Add(Value1, Value2);
         }
         
-        public System.Threading.Tasks.Task<string> AddAsync(WindowsFormsApp1.ServiceReference1.Complex Value1, WindowsFormsApp1.ServiceReference1.Complex Value2) {
+        public System.Threading.Tasks.Task<ICalcalator.Complex> AddAsync(ICalcalator.Complex Value1, ICalcalator.Complex Value2) {
             return base.Channel.AddAsync(Value1, Value2);
         }
         
-        public string Subtraction(WindowsFormsApp1.ServiceReference1.Complex Value1, WindowsFormsApp1.ServiceReference1.Complex Value2) {
+        public ICalcalator.Complex Subtraction(ICalcalator.Complex Value1, ICalcalator.Complex Value2) {
             return base.Channel.Subtraction(Value1, Value2);
         }
         
-        public System.Threading.Tasks.Task<string> SubtractionAsync(WindowsFormsApp1.ServiceReference1.Complex Value1, WindowsFormsApp1.ServiceReference1.Complex Value2) {
+        public System.Threading.Tasks.Task<ICalcalator.Complex> SubtractionAsync(ICalcalator.Complex Value1, ICalcalator.Complex Value2) {
             return base.Channel.SubtractionAsync(Value1, Value2);
         }
         
-        public string Multiply(WindowsFormsApp1.ServiceReference1.Complex Value1, WindowsFormsApp1.ServiceReference1.Complex Value2) {
+        public ICalcalator.Complex Multiply(ICalcalator.Complex Value1, ICalcalator.Complex Value2) {
             return base.Channel.Multiply(Value1, Value2);
         }
         
-        public System.Threading.Tasks.Task<string> MultiplyAsync(WindowsFormsApp1.ServiceReference1.Complex Value1, WindowsFormsApp1.ServiceReference1.Complex Value2) {
+        public System.Threading.Tasks.Task<ICalcalator.Complex> MultiplyAsync(ICalcalator.Complex Value1, ICalcalator.Complex Value2) {
             return base.Channel.MultiplyAsync(Value1, Value2);
         }
         
-        public string Division(WindowsFormsApp1.ServiceReference1.Complex Value1, WindowsFormsApp1.ServiceReference1.Complex Value2) {
+        public ICalcalator.Complex Division(ICalcalator.Complex Value1, ICalcalator.Complex Value2) {
             return base.Channel.Division(Value1, Value2);
         }
         
-        public System.Threading.Tasks.Task<string> DivisionAsync(WindowsFormsApp1.ServiceReference1.Complex Value1, WindowsFormsApp1.ServiceReference1.Complex Value2) {
+        public System.Threading.Tasks.Task<ICalcalator.Complex> DivisionAsync(ICalcalator.Complex Value1, ICalcalator.Complex Value2) {
             return base.Channel.DivisionAsync(Value1, Value2);
         }
         
-        public string Add2(double Value1, double Value2, double Value3, double Value4) {
+        public ICalcalator.Complex Add2(double Value1, double Value2, double Value3, double Value4) {
             return base.Channel.Add2(Value1, Value2, Value3, Value4);
         }
         
-        public System.Threading.Tasks.Task<string> Add2Async(double Value1, double Value2, double Value3, double Value4) {
+        public System.Threading.Tasks.Task<ICalcalator.Complex> Add2Async(double Value1, double Value2, double Value3, double Value4) {
             return base.Channel.Add2Async(Value1, Value2, Value3, Value4);
         }
         
-        public string Subtraction2(double Value1, double Value2, double Value3, double Value4) {
+        public ICalcalator.Complex Subtraction2(double Value1, double Value2, double Value3, double Value4) {
             return base.Channel.Subtraction2(Value1, Value2, Value3, Value4);
         }
         
-        public System.Threading.Tasks.Task<string> Subtraction2Async(double Value1, double Value2, double Value3, double Value4) {
+        public System.Threading.Tasks.Task<ICalcalator.Complex> Subtraction2Async(double Value1, double Value2, double Value3, double Value4) {
             return base.Channel.Subtraction2Async(Value1, Value2, Value3, Value4);
         }
         
-        public string Multiply2(double Value1, double Value2, double Value3, double Value4) {
+        public ICalcalator.Complex Multiply2(double Value1, double Value2, double Value3, double Value4) {
             return base.Channel.Multiply2(Value1, Value2, Value3, Value4);
         }
         
-        public System.Threading.Tasks.Task<string> Multiply2Async(double Value1, double Value2, double Value3, double Value4) {
+        public System.Threading.Tasks.Task<ICalcalator.Complex> Multiply2Async(double Value1, double Value2, double Value3, double Value4) {
             return base.Channel.Multiply2Async(Value1, Value2, Value3, Value4);
         }
         
-        public string Division2(double Value1, double Value2, double Value3, double Value4) {
+        public ICalcalator.Complex Division2(double Value1, double Value2, double Value3, double Value4) {
             return base.Channel.Division2(Value1, Value2, Value3, Value4);
         }
         
-        public System.Threading.Tasks.Task<string> Division2Async(double Value1, double Value2, double Value3, double Value4) {
+        public System.Threading.Tasks.Task<ICalcalator.Complex> Division2Async(double Value1, double Value2, double Value3, double Value4) {
             return base.Channel.Division2Async(Value1, Value2, Value3, Value4);
+        }
+        
+        public string GetValue(ICalcalator.Complex complex) {
+            return base.Channel.GetValue(complex);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetValueAsync(ICalcalator.Complex complex) {
+            return base.Channel.GetValueAsync(complex);
         }
     }
 }

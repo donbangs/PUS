@@ -79,52 +79,58 @@ namespace ConsoleCalculator.ServiceReference1 {
     public interface ICalculator {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Add", ReplyAction="http://tempuri.org/ICalculator/AddResponse")]
-        string Add(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2);
+        ConsoleCalculator.ServiceReference1.Complex Add(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Add", ReplyAction="http://tempuri.org/ICalculator/AddResponse")]
-        System.Threading.Tasks.Task<string> AddAsync(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2);
+        System.Threading.Tasks.Task<ConsoleCalculator.ServiceReference1.Complex> AddAsync(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Subtraction", ReplyAction="http://tempuri.org/ICalculator/SubtractionResponse")]
-        string Subtraction(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2);
+        ConsoleCalculator.ServiceReference1.Complex Subtraction(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Subtraction", ReplyAction="http://tempuri.org/ICalculator/SubtractionResponse")]
-        System.Threading.Tasks.Task<string> SubtractionAsync(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2);
+        System.Threading.Tasks.Task<ConsoleCalculator.ServiceReference1.Complex> SubtractionAsync(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Multiply", ReplyAction="http://tempuri.org/ICalculator/MultiplyResponse")]
-        string Multiply(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2);
+        ConsoleCalculator.ServiceReference1.Complex Multiply(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Multiply", ReplyAction="http://tempuri.org/ICalculator/MultiplyResponse")]
-        System.Threading.Tasks.Task<string> MultiplyAsync(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2);
+        System.Threading.Tasks.Task<ConsoleCalculator.ServiceReference1.Complex> MultiplyAsync(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Division", ReplyAction="http://tempuri.org/ICalculator/DivisionResponse")]
-        string Division(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2);
+        ConsoleCalculator.ServiceReference1.Complex Division(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Division", ReplyAction="http://tempuri.org/ICalculator/DivisionResponse")]
-        System.Threading.Tasks.Task<string> DivisionAsync(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2);
+        System.Threading.Tasks.Task<ConsoleCalculator.ServiceReference1.Complex> DivisionAsync(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Add2", ReplyAction="http://tempuri.org/ICalculator/Add2Response")]
-        string Add2(double Value1, double Value2, double Value3, double Value4);
+        ConsoleCalculator.ServiceReference1.Complex Add2(double Value1, double Value2, double Value3, double Value4);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Add2", ReplyAction="http://tempuri.org/ICalculator/Add2Response")]
-        System.Threading.Tasks.Task<string> Add2Async(double Value1, double Value2, double Value3, double Value4);
+        System.Threading.Tasks.Task<ConsoleCalculator.ServiceReference1.Complex> Add2Async(double Value1, double Value2, double Value3, double Value4);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Subtraction2", ReplyAction="http://tempuri.org/ICalculator/Subtraction2Response")]
-        string Subtraction2(double Value1, double Value2, double Value3, double Value4);
+        ConsoleCalculator.ServiceReference1.Complex Subtraction2(double Value1, double Value2, double Value3, double Value4);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Subtraction2", ReplyAction="http://tempuri.org/ICalculator/Subtraction2Response")]
-        System.Threading.Tasks.Task<string> Subtraction2Async(double Value1, double Value2, double Value3, double Value4);
+        System.Threading.Tasks.Task<ConsoleCalculator.ServiceReference1.Complex> Subtraction2Async(double Value1, double Value2, double Value3, double Value4);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Multiply2", ReplyAction="http://tempuri.org/ICalculator/Multiply2Response")]
-        string Multiply2(double Value1, double Value2, double Value3, double Value4);
+        ConsoleCalculator.ServiceReference1.Complex Multiply2(double Value1, double Value2, double Value3, double Value4);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Multiply2", ReplyAction="http://tempuri.org/ICalculator/Multiply2Response")]
-        System.Threading.Tasks.Task<string> Multiply2Async(double Value1, double Value2, double Value3, double Value4);
+        System.Threading.Tasks.Task<ConsoleCalculator.ServiceReference1.Complex> Multiply2Async(double Value1, double Value2, double Value3, double Value4);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Division2", ReplyAction="http://tempuri.org/ICalculator/Division2Response")]
-        string Division2(double Value1, double Value2, double Value3, double Value4);
+        ConsoleCalculator.ServiceReference1.Complex Division2(double Value1, double Value2, double Value3, double Value4);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Division2", ReplyAction="http://tempuri.org/ICalculator/Division2Response")]
-        System.Threading.Tasks.Task<string> Division2Async(double Value1, double Value2, double Value3, double Value4);
+        System.Threading.Tasks.Task<ConsoleCalculator.ServiceReference1.Complex> Division2Async(double Value1, double Value2, double Value3, double Value4);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/GetValue", ReplyAction="http://tempuri.org/ICalculator/GetValueResponse")]
+        string GetValue(ConsoleCalculator.ServiceReference1.Complex complex);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/GetValue", ReplyAction="http://tempuri.org/ICalculator/GetValueResponse")]
+        System.Threading.Tasks.Task<string> GetValueAsync(ConsoleCalculator.ServiceReference1.Complex complex);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -154,68 +160,76 @@ namespace ConsoleCalculator.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public string Add(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2) {
+        public ConsoleCalculator.ServiceReference1.Complex Add(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2) {
             return base.Channel.Add(Value1, Value2);
         }
         
-        public System.Threading.Tasks.Task<string> AddAsync(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2) {
+        public System.Threading.Tasks.Task<ConsoleCalculator.ServiceReference1.Complex> AddAsync(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2) {
             return base.Channel.AddAsync(Value1, Value2);
         }
         
-        public string Subtraction(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2) {
+        public ConsoleCalculator.ServiceReference1.Complex Subtraction(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2) {
             return base.Channel.Subtraction(Value1, Value2);
         }
         
-        public System.Threading.Tasks.Task<string> SubtractionAsync(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2) {
+        public System.Threading.Tasks.Task<ConsoleCalculator.ServiceReference1.Complex> SubtractionAsync(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2) {
             return base.Channel.SubtractionAsync(Value1, Value2);
         }
         
-        public string Multiply(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2) {
+        public ConsoleCalculator.ServiceReference1.Complex Multiply(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2) {
             return base.Channel.Multiply(Value1, Value2);
         }
         
-        public System.Threading.Tasks.Task<string> MultiplyAsync(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2) {
+        public System.Threading.Tasks.Task<ConsoleCalculator.ServiceReference1.Complex> MultiplyAsync(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2) {
             return base.Channel.MultiplyAsync(Value1, Value2);
         }
         
-        public string Division(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2) {
+        public ConsoleCalculator.ServiceReference1.Complex Division(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2) {
             return base.Channel.Division(Value1, Value2);
         }
         
-        public System.Threading.Tasks.Task<string> DivisionAsync(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2) {
+        public System.Threading.Tasks.Task<ConsoleCalculator.ServiceReference1.Complex> DivisionAsync(ConsoleCalculator.ServiceReference1.Complex Value1, ConsoleCalculator.ServiceReference1.Complex Value2) {
             return base.Channel.DivisionAsync(Value1, Value2);
         }
         
-        public string Add2(double Value1, double Value2, double Value3, double Value4) {
+        public ConsoleCalculator.ServiceReference1.Complex Add2(double Value1, double Value2, double Value3, double Value4) {
             return base.Channel.Add2(Value1, Value2, Value3, Value4);
         }
         
-        public System.Threading.Tasks.Task<string> Add2Async(double Value1, double Value2, double Value3, double Value4) {
+        public System.Threading.Tasks.Task<ConsoleCalculator.ServiceReference1.Complex> Add2Async(double Value1, double Value2, double Value3, double Value4) {
             return base.Channel.Add2Async(Value1, Value2, Value3, Value4);
         }
         
-        public string Subtraction2(double Value1, double Value2, double Value3, double Value4) {
+        public ConsoleCalculator.ServiceReference1.Complex Subtraction2(double Value1, double Value2, double Value3, double Value4) {
             return base.Channel.Subtraction2(Value1, Value2, Value3, Value4);
         }
         
-        public System.Threading.Tasks.Task<string> Subtraction2Async(double Value1, double Value2, double Value3, double Value4) {
+        public System.Threading.Tasks.Task<ConsoleCalculator.ServiceReference1.Complex> Subtraction2Async(double Value1, double Value2, double Value3, double Value4) {
             return base.Channel.Subtraction2Async(Value1, Value2, Value3, Value4);
         }
         
-        public string Multiply2(double Value1, double Value2, double Value3, double Value4) {
+        public ConsoleCalculator.ServiceReference1.Complex Multiply2(double Value1, double Value2, double Value3, double Value4) {
             return base.Channel.Multiply2(Value1, Value2, Value3, Value4);
         }
         
-        public System.Threading.Tasks.Task<string> Multiply2Async(double Value1, double Value2, double Value3, double Value4) {
+        public System.Threading.Tasks.Task<ConsoleCalculator.ServiceReference1.Complex> Multiply2Async(double Value1, double Value2, double Value3, double Value4) {
             return base.Channel.Multiply2Async(Value1, Value2, Value3, Value4);
         }
         
-        public string Division2(double Value1, double Value2, double Value3, double Value4) {
+        public ConsoleCalculator.ServiceReference1.Complex Division2(double Value1, double Value2, double Value3, double Value4) {
             return base.Channel.Division2(Value1, Value2, Value3, Value4);
         }
         
-        public System.Threading.Tasks.Task<string> Division2Async(double Value1, double Value2, double Value3, double Value4) {
+        public System.Threading.Tasks.Task<ConsoleCalculator.ServiceReference1.Complex> Division2Async(double Value1, double Value2, double Value3, double Value4) {
             return base.Channel.Division2Async(Value1, Value2, Value3, Value4);
+        }
+        
+        public string GetValue(ConsoleCalculator.ServiceReference1.Complex complex) {
+            return base.Channel.GetValue(complex);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetValueAsync(ConsoleCalculator.ServiceReference1.Complex complex) {
+            return base.Channel.GetValueAsync(complex);
         }
     }
 }

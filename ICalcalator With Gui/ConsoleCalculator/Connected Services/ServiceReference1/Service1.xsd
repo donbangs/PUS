@@ -12,41 +12,26 @@
   <xs:element name="AddResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="AddResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ICalcalator" minOccurs="0" name="AddResult" nillable="true" type="q3:Complex" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Subtraction">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ICalcalator" minOccurs="0" name="Value1" nillable="true" type="q3:Complex" />
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ICalcalator" minOccurs="0" name="Value2" nillable="true" type="q4:Complex" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ICalcalator" minOccurs="0" name="Value1" nillable="true" type="q4:Complex" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ICalcalator" minOccurs="0" name="Value2" nillable="true" type="q5:Complex" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="SubtractionResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="SubtractionResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ICalcalator" minOccurs="0" name="SubtractionResult" nillable="true" type="q6:Complex" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Multiply">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ICalcalator" minOccurs="0" name="Value1" nillable="true" type="q5:Complex" />
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ICalcalator" minOccurs="0" name="Value2" nillable="true" type="q6:Complex" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="MultiplyResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="MultiplyResult" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Division">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ICalcalator" minOccurs="0" name="Value1" nillable="true" type="q7:Complex" />
@@ -54,10 +39,25 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="MultiplyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ICalcalator" minOccurs="0" name="MultiplyResult" nillable="true" type="q9:Complex" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Division">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ICalcalator" minOccurs="0" name="Value1" nillable="true" type="q10:Complex" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ICalcalator" minOccurs="0" name="Value2" nillable="true" type="q11:Complex" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="DivisionResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="DivisionResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ICalcalator" minOccurs="0" name="DivisionResult" nillable="true" type="q12:Complex" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -74,7 +74,7 @@
   <xs:element name="Add2Response">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Add2Result" nillable="true" type="xs:string" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ICalcalator" minOccurs="0" name="Add2Result" nillable="true" type="q13:Complex" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -91,7 +91,7 @@
   <xs:element name="Subtraction2Response">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Subtraction2Result" nillable="true" type="xs:string" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ICalcalator" minOccurs="0" name="Subtraction2Result" nillable="true" type="q14:Complex" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -108,7 +108,7 @@
   <xs:element name="Multiply2Response">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Multiply2Result" nillable="true" type="xs:string" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/ICalcalator" minOccurs="0" name="Multiply2Result" nillable="true" type="q15:Complex" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -125,7 +125,21 @@
   <xs:element name="Division2Response">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Division2Result" nillable="true" type="xs:string" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ICalcalator" minOccurs="0" name="Division2Result" nillable="true" type="q16:Complex" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/ICalcalator" minOccurs="0" name="complex" nillable="true" type="q17:Complex" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetValueResult" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
